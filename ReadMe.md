@@ -32,20 +32,20 @@ Paws and Found is an app for pets who are lost. Lost pet owners will be able to 
 
 **Required Must-have Stories**
 
-* Users can create a new account
-* Users can log-in to their account
-* Users can post a photo to their feed with geolocation on
-* Users can privately message other users
-* Users can update their post to "Pet found"
-* Users can refresh their feed
-* Users will receive notifications
+[X] Users can create a new account
+[X] Users can log-in to their account
+[] Users can post a photo to their feed with geolocation on
+[] Users can privately message other users
+[] Users can update their post to "Pet found"
+[] Users can refresh their feed
+[] Users will receive notifications
 
 **Optional Nice-to-have Stories**
 
-* Users will be able to comment on posts to show support
-* Users will be able to tap into categories (dog, bunny, cat, etc.)
-* Users will be able to see trending lost pets in their areas
-* Users will be able to reset password if forgot password
+[] Users will be able to comment on posts to show support
+[] Users will be able to tap into categories (dog, bunny, cat, etc.)
+[] Users will be able to see trending lost pets in their areas
+[] Users will be able to reset password if forgot password
 
 ### 2. Screen Archetypes
 
