@@ -100,6 +100,15 @@ Paws and Found is an app for pets who are lost. Lost pet owners will be able to 
 
 ### [BONUS] Interactive Prototype
 
+## Progress GIFs
+<div>
+    <a href="https://www.loom.com/share/219d6c794de4418dbd6c9dad0e3fb794">
+    </a>
+    <a href="https://www.loom.com/share/219d6c794de4418dbd6c9dad0e3fb794">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/219d6c794de4418dbd6c9dad0e3fb794-with-play.gif">
+    </a>
+  </div>
+
 ## Schema 
 
 [This section will be completed in Unit 9]
