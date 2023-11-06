@@ -21,7 +21,5 @@
 			</array>
 		</dict>
 	</dict>
-	<key>NSCameraUsageDescription</key>
-	<string>In order to take a photo to add to your post, we need to access your camera.</string>
 </dict>
 </plist>
