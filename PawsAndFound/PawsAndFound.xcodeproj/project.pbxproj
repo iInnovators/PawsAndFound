@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0811F3672AF973C5005AD1C2 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0811F3662AF973C5005AD1C2 /* Pet.swift */; };
 		5B5A3DC22AF7F3DB00AC84D2 /* ParseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5B5A3DC12AF7F3DB00AC84D2 /* ParseSwift */; };
 		5B5A3DC52AF7F3EA00AC84D2 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 5B5A3DC42AF7F3EA00AC84D2 /* AlamofireImage */; };
 		5B5A3DC82AF7F41900AC84D2 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 5B5A3DC72AF7F41900AC84D2 /* Alamofire */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0811F3662AF973C5005AD1C2 /* Pet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
 		5B5A3DCA2AF7F45E00AC84D2 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5B5A3DCB2AF7F45E00AC84D2 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		5B5A3DCF2AF7F47700AC84D2 /* DateFormatter+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extensions.swift"; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 			children = (
 				5B5A3DCA2AF7F45E00AC84D2 /* User.swift */,
 				5B5A3DCB2AF7F45E00AC84D2 /* Post.swift */,
+				0811F3662AF973C5005AD1C2 /* Pet.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				5B5A3DD72AF7F48900AC84D2 /* PostCell.swift in Sources */,
 				5B5A3DCD2AF7F45E00AC84D2 /* Post.swift in Sources */,
 				5B5A3DD62AF7F48800AC84D2 /* FeedViewController.swift in Sources */,
+				0811F3672AF973C5005AD1C2 /* Pet.swift in Sources */,
 				5B5A3DD22AF7F47700AC84D2 /* ViewController+Extensions.swift in Sources */,
 				5B5A3DDC2AF7F49500AC84D2 /* LoginViewController.swift in Sources */,
 			);
@@ -372,19 +376,22 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 35CC2F3Q6D;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PawsAndFound/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "In order to take a photo to add to your post, we need to access your camera.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ios.jb.fiu.edu.PawsAndFound;
+				PRODUCT_BUNDLE_IDENTIFIER = ios.jr.fiu.edu.PawsAndFound;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -399,19 +406,22 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 35CC2F3Q6D;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PawsAndFound/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "In order to take a photo to add to your post, we need to access your camera.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ios.jb.fiu.edu.PawsAndFound;
+				PRODUCT_BUNDLE_IDENTIFIER = ios.jr.fiu.edu.PawsAndFound;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
