@@ -351,12 +351,6 @@
                                 <action selector="onLogOutTapped:" destination="eWX-K4-1Kn" id="dWC-gm-DO3"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="plus.app" catalog="system" id="00x-cc-IxM">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <segue destination="j7F-Ms-wOA" kind="show" id="Wu2-Xm-hQQ"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="6jC-Ig-ZuT" id="y5T-0T-jdP"/>
@@ -563,31 +557,6 @@
             </objects>
             <point key="canvasLocation" x="1183.0769230769231" y="711.61137440758296"/>
         </scene>
-        <!--Post View-->
-        <scene sceneID="0wU-F5-KIO">
-            <objects>
-                <viewController title="Post View" id="4HJ-re-Foh" userLabel="Post View" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ifK-Ig-GfZ">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="POST" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WNY-qe-OU2">
-                                <rect key="frame" x="174" y="412" width="44" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="97p-Fi-TX3"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="VpM-Ua-t5v"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SQC-Ld-H5K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1920" y="1447"/>
-        </scene>
         <!--Post View Controller-->
         <scene sceneID="mHE-cv-4Ps">
             <objects>
@@ -671,7 +640,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2676.9230769230767" y="711.61137440758296"/>
+            <point key="canvasLocation" x="1920" y="1447"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="MH9-nj-KMb">
@@ -719,7 +688,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="4HJ-re-Foh" kind="relationship" relationship="rootViewController" id="j8J-Gn-kRI"/>
+                        <segue destination="j7F-Ms-wOA" kind="relationship" relationship="rootViewController" id="jdp-R8-anA"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BR9-BS-XXL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -908,7 +877,6 @@
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="photo" catalog="system" width="128" height="93"/>
         <image name="photo.fill" catalog="system" width="128" height="93"/>
-        <image name="plus.app" catalog="system" width="128" height="114"/>
         <systemColor name="quaternaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.17647058823529413" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
