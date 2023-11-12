@@ -25,6 +25,8 @@
 		5B7517B12AF0399E00F8C387 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7517B02AF0399E00F8C387 /* SceneDelegate.swift */; };
 		5B7517B82AF039A000F8C387 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B7517B72AF039A000F8C387 /* Assets.xcassets */; };
 		5B7517BB2AF039A000F8C387 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B7517B92AF039A000F8C387 /* LaunchScreen.storyboard */; };
+		5BC335B32B0067E100694E29 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC335B22B0067E100694E29 /* ProfileViewController.swift */; };
+		5BC335B62B0070F900694E29 /* AddPetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC335B52B0070F900694E29 /* AddPetViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,8 @@
 		5B7517B72AF039A000F8C387 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B7517BA2AF039A000F8C387 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B7517BC2AF039A000F8C387 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BC335B22B0067E100694E29 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		5BC335B52B0070F900694E29 /* AddPetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPetViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,12 +136,22 @@
 				5B5A3DC92AF7F45E00AC84D2 /* Models */,
 				5B5A3DD82AF7F49500AC84D2 /* Login */,
 				5B5A3DDD2AF7F49F00AC84D2 /* Post */,
+				5BC335B42B0070D900694E29 /* Profile */,
 				5B7517B72AF039A000F8C387 /* Assets.xcassets */,
 				5B5A3DE02AF7F4F600AC84D2 /* Main.storyboard */,
 				5B7517B92AF039A000F8C387 /* LaunchScreen.storyboard */,
 				5B7517BC2AF039A000F8C387 /* Info.plist */,
 			);
 			path = PawsAndFound;
+			sourceTree = "<group>";
+		};
+		5BC335B42B0070D900694E29 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				5BC335B22B0067E100694E29 /* ProfileViewController.swift */,
+				5BC335B52B0070F900694E29 /* AddPetViewController.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +245,8 @@
 				5B5A3DCD2AF7F45E00AC84D2 /* Post.swift in Sources */,
 				5B5A3DD62AF7F48800AC84D2 /* FeedViewController.swift in Sources */,
 				0811F3672AF973C5005AD1C2 /* Pet.swift in Sources */,
+				5BC335B62B0070F900694E29 /* AddPetViewController.swift in Sources */,
+				5BC335B32B0067E100694E29 /* ProfileViewController.swift in Sources */,
 				5B5A3DD22AF7F47700AC84D2 /* ViewController+Extensions.swift in Sources */,
 				5B5A3DDC2AF7F49500AC84D2 /* LoginViewController.swift in Sources */,
 			);
