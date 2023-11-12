@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hot-nK-RXH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hot-nK-RXH">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -74,7 +74,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Oh3-Iz-IeO">
-                                <rect key="frame" x="70.333333333333314" y="433" width="249.66666666666669" height="34.333333333333314"/>
+                                <rect key="frame" x="70.333333333333329" y="433" width="249.66666666666669" height="34.333333333333314"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YAz-Tx-FSv">
                                         <rect key="frame" x="0.0" y="8" width="161" height="18"/>
@@ -374,7 +374,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.84608951600000004" green="0.91300020869999998" blue="0.99794572650000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="354" id="PXK-zF-kJf">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PetCell" rowHeight="354" id="PXK-zF-kJf" customClass="PetCell" customModule="PawsAndFound" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="390" height="354"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PXK-zF-kJf" id="cvd-X4-pIs">
@@ -464,6 +464,12 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.84774005409999997" green="0.91200810669999999" blue="0.99216777089999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <outlet property="petBreedLabel" destination="vw2-kn-4xQ" id="BF3-h0-u0V"/>
+                                            <outlet property="petDescriptionLabel" destination="gQ2-KT-SDX" id="CbT-RK-w2Z"/>
+                                            <outlet property="petImageView" destination="WLE-O7-rce" id="bMf-oT-fWk"/>
+                                            <outlet property="petNameLabel" destination="gDk-2C-8Az" id="Efd-mq-VTZ"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -525,6 +531,7 @@
                     <connections>
                         <outlet property="profileName" destination="w9f-77-XuX" id="XnO-PQ-9Ew"/>
                         <outlet property="profilePicture" destination="sIm-yI-AJf" id="VlL-AZ-rex"/>
+                        <outlet property="tableView" destination="eLJ-Bi-aC0" id="yV8-uH-iMB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jQS-g2-vG9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -539,7 +546,7 @@
         <!--Add Pet-->
         <scene sceneID="B9F-b5-YZg">
             <objects>
-                <viewController id="mvU-W3-Cq7" sceneMemberID="viewController">
+                <viewController id="mvU-W3-Cq7" customClass="AddPetViewController" customModule="PawsAndFound" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iO6-f5-FN0">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -625,6 +632,9 @@
                                         <buttonConfiguration key="configuration" style="filled" title="Add Pet">
                                             <color key="baseForegroundColor" red="0.12801869160000001" green="0.17549872999999999" blue="0.3171647849" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="onAddPetTapped:" destination="mvU-W3-Cq7" eventType="touchUpInside" id="t7C-rT-BgB"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -641,6 +651,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add Pet" style="editor" customizationIdentifier="" id="0cf-UB-mJg"/>
+                    <connections>
+                        <outlet property="petBreedField" destination="BGh-xL-2jE" id="I6w-g5-OcX"/>
+                        <outlet property="petDescriptionField" destination="U4g-Nh-6fx" id="IgW-lO-Kku"/>
+                        <outlet property="petNameField" destination="LrW-7I-f7U" id="Rpi-cm-W97"/>
+                        <outlet property="petPreviewImageView" destination="NJA-sA-866" id="GDf-X6-9uG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vnx-Ed-3Ab" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
