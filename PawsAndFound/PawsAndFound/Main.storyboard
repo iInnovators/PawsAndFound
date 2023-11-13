@@ -916,10 +916,10 @@
             </objects>
             <point key="canvasLocation" x="2108" y="1430"/>
         </scene>
-        <!--Maps View Controller-->
+        <!--MapsViewController-->
         <scene sceneID="deg-QU-BRL">
             <objects>
-                <viewController title="Maps View" id="ZqT-l3-tL5" userLabel="Maps View Controller" sceneMemberID="viewController">
+                <viewController title="Maps View" id="ZqT-l3-tL5" userLabel="MapsViewController" customClass="MapViewController" customModule="PawsAndFound" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sLL-td-rx3">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -941,6 +941,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kMX-lr-TAY"/>
+                    <connections>
+                        <outlet property="mapView" destination="xLR-4W-0LQ" id="KuM-vk-po7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Xn-VB-PsE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

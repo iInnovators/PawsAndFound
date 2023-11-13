@@ -225,8 +225,9 @@ extension PostViewController: PHPickerViewControllerDelegate {
         }
 
         print("📍 Image location coordinate: \(location.coordinate)")
-        // FINISHED ADDING STUFF: ERNESTO
-
+        
+        
+        
         // Make sure we have a non-nil item provider
         guard let provider = results.first?.itemProvider,
               // Make sure the provider can load a UIImage
