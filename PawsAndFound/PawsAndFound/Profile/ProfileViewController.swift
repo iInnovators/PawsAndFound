@@ -32,7 +32,7 @@ class ProfileViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.allowsSelection = false
-
+        profileName.text = User.current?.username
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -150,11 +150,6 @@ class ProfileViewController: UIViewController {
         }else{
             print("Configuring for a different user")
         }
-    }
-    
-    func configure(with user: User){
-        print(user.username)
-        profileName.text = user.username
     }
     
 }
