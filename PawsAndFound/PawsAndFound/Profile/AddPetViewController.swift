@@ -82,7 +82,7 @@ class AddPetViewController: UIViewController {
         var pet = Pet()
         pet.petName = petNameField.text
         pet.petBreed = petBreedField.text
-        pet.petDesc = petDescriptionField.text
+        //pet.petDesc = petDescriptionField.text
         
         guard let image = pickedImage,
               // Create and compress image data (jpeg) from UIImage

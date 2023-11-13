@@ -21,7 +21,7 @@ struct Pet: ParseObject {
     var user: User?
     var petName: String?
     var petBreed: String?
-    var petDesc: String?
+    //var petDesc: String?
     var petImageFile: ParseFile?
     var userImageFile: ParseFile?
 }

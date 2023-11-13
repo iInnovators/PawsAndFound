@@ -33,7 +33,7 @@ class PetCell: UITableViewCell {
     func configure(with pet: Pet){
         petNameLabel.text = pet.petName
         petBreedLabel.text = pet.petBreed
-        petDescriptionLabel.text = pet.petDesc
+        //petDescriptionLabel.text = pet.petDesc
 
         // Image
         if let petImageView = pet.petImageFile,
