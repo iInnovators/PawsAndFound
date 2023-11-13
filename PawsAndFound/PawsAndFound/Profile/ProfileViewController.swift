@@ -59,13 +59,10 @@ class ProfileViewController: UIViewController {
     @IBAction func onPickedImageTapped(_ sender: Any) {
         // Create a configuration object
         var config = PHPickerConfiguration()
-
         // Set the filter to only show images as options (i.e. no videos, etc.).
         config.filter = .images
-
         // Request the original file format. Fastest method as it avoids transcoding.
         config.preferredAssetRepresentationMode = .current
-
         // Only allow 1 image to be selected at a time.
         config.selectionLimit = 1
 
@@ -86,7 +83,8 @@ class ProfileViewController: UIViewController {
         // Unwrap optional pickedImage
         guard let image = pickedImage,
               // Create and compress image data (jpeg) from UIImage
-              let imageData = image.jpegData(compressionQuality: 0.1) else {
+              let imageData = image.jpegData(compressionQuality: 0.1)
+        else {
             return
         }
 
@@ -131,25 +129,34 @@ class ProfileViewController: UIViewController {
             if let profilePicture = pet.userImageFile,
                let imageUrl = profilePicture.url {
                 
-                // Use AlamofireImage helper to fetch remote image from URL
                 print("Image URL: \(imageUrl)")
+                
+                // Use AlamofireImage helper to fetch remote image from URL
                 imageDataRequest = AF.request(imageUrl).responseImage { [weak self] response in
                     switch response.result {
                     case .success(let image):
                         // Set image view image with fetched image
-                        self?.profilePicture.image = image
-                        print("Image set successfully")
+                        if self?.profilePicture.image == nil{
+                            self?.profilePicture.image = image
+                            print("Image set successfully")
+                        }
+                        
                     case .failure(let error):
-                        print("❌ Error fetching image: \(error.localizedDescription)")
+                        print("❌ Error fetching image!!!!!!!!!!!: \(error.localizedDescription)")
                         break
                     }
                 }
             }else{
                 print("Pet has no userImageFile")
+                print("pet.userImageFile: \(pet.userImageFile)")
+                print("pet: \(pet)")
             }
         }else{
             print("Configuring for a different user")
         }
+        if pet.userImageFile == nil {
+                print("Pet has no userImageFile")
+            }
     }
     
     func configure(with user: User){
