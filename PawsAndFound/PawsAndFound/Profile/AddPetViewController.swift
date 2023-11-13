@@ -22,8 +22,6 @@ class AddPetViewController: UIViewController {
     @IBOutlet weak var petPreviewImageView: UIImageView!
     @IBOutlet weak var petNameField: UITextField!
     @IBOutlet weak var petBreedField: UITextField!
-    @IBOutlet weak var petDescriptionField: UITextField!
-    
     
     
     //when user wants to upload a pet pic

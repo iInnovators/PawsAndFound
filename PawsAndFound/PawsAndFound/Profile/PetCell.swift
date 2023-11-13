@@ -26,7 +26,6 @@ class PetCell: UITableViewCell {
     @IBOutlet weak var petNameLabel: UILabel!
     
     @IBOutlet weak var petBreedLabel: UILabel!
-    @IBOutlet weak var petDescriptionLabel: UILabel!
     @IBOutlet weak var petImageView: UIImageView!
     
     

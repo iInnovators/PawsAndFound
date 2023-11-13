@@ -39,6 +39,7 @@ class ProfileViewController: UIViewController {
         super.viewWillAppear(animated)
         queryPosts()
     }
+    
     private func queryPosts(){
         // only get pets for current user
         let pointer = try! User.current?.toPointer()
