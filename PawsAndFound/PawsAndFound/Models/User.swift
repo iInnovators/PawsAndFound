@@ -8,7 +8,6 @@
 import Foundation
 import ParseSwift
 
-
 struct User: ParseUser {
     // These are required by `ParseObject`.
     var objectId: String?
