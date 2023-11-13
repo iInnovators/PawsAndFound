@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		0811F3672AF973C5005AD1C2 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0811F3662AF973C5005AD1C2 /* Pet.swift */; };
 		187080622B007E8A0068CE89 /* PetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187080612B007E8A0068CE89 /* PetCell.swift */; };
+		3DDF330C2B0288B7007AB462 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDF330B2B0288B7007AB462 /* Comment.swift */; };
+		3DDF33132B02A5F1007AB462 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDF33122B02A5F1007AB462 /* CommentsViewController.swift */; };
+		3DDF33152B02A644007AB462 /* AddCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDF33142B02A644007AB462 /* AddCommentViewController.swift */; };
 		5B5A3DC22AF7F3DB00AC84D2 /* ParseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5B5A3DC12AF7F3DB00AC84D2 /* ParseSwift */; };
 		5B5A3DC52AF7F3EA00AC84D2 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 5B5A3DC42AF7F3EA00AC84D2 /* AlamofireImage */; };
 		5B5A3DC82AF7F41900AC84D2 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 5B5A3DC72AF7F41900AC84D2 /* Alamofire */; };
@@ -34,6 +37,9 @@
 /* Begin PBXFileReference section */
 		0811F3662AF973C5005AD1C2 /* Pet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
 		187080612B007E8A0068CE89 /* PetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetCell.swift; sourceTree = "<group>"; };
+		3DDF330B2B0288B7007AB462 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		3DDF33122B02A5F1007AB462 /* CommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
+		3DDF33142B02A644007AB462 /* AddCommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCommentViewController.swift; sourceTree = "<group>"; };
 		5B5A3DCA2AF7F45E00AC84D2 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5B5A3DCB2AF7F45E00AC84D2 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		5B5A3DCF2AF7F47700AC84D2 /* DateFormatter+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extensions.swift"; sourceTree = "<group>"; };
@@ -69,12 +75,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3DDF330D2B029EB0007AB462 /* Comments */ = {
+			isa = PBXGroup;
+			children = (
+				3DDF33122B02A5F1007AB462 /* CommentsViewController.swift */,
+				3DDF33142B02A644007AB462 /* AddCommentViewController.swift */,
+			);
+			path = Comments;
+			sourceTree = "<group>";
+		};
 		5B5A3DC92AF7F45E00AC84D2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				5B5A3DCA2AF7F45E00AC84D2 /* User.swift */,
 				5B5A3DCB2AF7F45E00AC84D2 /* Post.swift */,
 				0811F3662AF973C5005AD1C2 /* Pet.swift */,
+				3DDF330B2B0288B7007AB462 /* Comment.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -136,6 +152,7 @@
 				5B7517AE2AF0399E00F8C387 /* AppDelegate.swift */,
 				5B7517B02AF0399E00F8C387 /* SceneDelegate.swift */,
 				5B5A3DCE2AF7F47700AC84D2 /* Extensions */,
+				3DDF330D2B029EB0007AB462 /* Comments */,
 				5B5A3DD32AF7F48800AC84D2 /* Feed */,
 				5B5A3DC92AF7F45E00AC84D2 /* Models */,
 				5B5A3DD82AF7F49500AC84D2 /* Login */,
@@ -246,12 +263,15 @@
 				5B5A3DCC2AF7F45E00AC84D2 /* User.swift in Sources */,
 				5B5A3DD12AF7F47700AC84D2 /* DateFormatter+Extensions.swift in Sources */,
 				5B7517AF2AF0399E00F8C387 /* AppDelegate.swift in Sources */,
+				3DDF330C2B0288B7007AB462 /* Comment.swift in Sources */,
 				5B5A3DDB2AF7F49500AC84D2 /* SignUpViewController.swift in Sources */,
 				5B7517B12AF0399E00F8C387 /* SceneDelegate.swift in Sources */,
+				3DDF33132B02A5F1007AB462 /* CommentsViewController.swift in Sources */,
 				5B5A3DD72AF7F48900AC84D2 /* PostCell.swift in Sources */,
 				5B5A3DCD2AF7F45E00AC84D2 /* Post.swift in Sources */,
 				5B5A3DD62AF7F48800AC84D2 /* FeedViewController.swift in Sources */,
 				0811F3672AF973C5005AD1C2 /* Pet.swift in Sources */,
+				3DDF33152B02A644007AB462 /* AddCommentViewController.swift in Sources */,
 				5BC335B62B0070F900694E29 /* AddPetViewController.swift in Sources */,
 				5BC335B32B0067E100694E29 /* ProfileViewController.swift in Sources */,
 				5B5A3DD22AF7F47700AC84D2 /* ViewController+Extensions.swift in Sources */,
