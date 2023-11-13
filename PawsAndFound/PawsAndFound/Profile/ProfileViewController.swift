@@ -39,10 +39,11 @@ class ProfileViewController: UIViewController {
         super.viewWillAppear(animated)
         queryPosts()
     }
-    
     private func queryPosts(){
-        let query = Pet.query().include("petName").include("petImageFile").include("userImageFile")
-        
+        // only get pets for current user
+        let pointer = try! User.current?.toPointer()
+        let constraint: QueryConstraint = "user" == pointer
+        let query = Pet.query(constraint).include("petName").include("petImageFile").include("userImageFile").include("user")
         query.find{ [weak self] result in
             switch result {
             case .success(let pets):

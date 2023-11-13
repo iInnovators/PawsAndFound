@@ -119,21 +119,6 @@ class AddPetViewController: UIViewController {
                 }
             }
         }
-        
-        pet.save { [weak self] result in
-            DispatchQueue.main.async {
-                switch result {
-                case .success(let pet):
-                    print("✅ Pet Saved! \(pet)")
-                    
-                        // Return to previous view controller
-                        self?.navigationController?.popViewController(animated: true)
-                
-                case .failure(let error):
-                    self?.showAlert(description: error.localizedDescription)
-                }
-            }
-        }
     }
 }
 extension AddPetViewController: PHPickerViewControllerDelegate {
