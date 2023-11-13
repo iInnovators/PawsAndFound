@@ -15,10 +15,13 @@ struct Pet: ParseObject {
     var updatedAt: Date?
     var ACL: ParseACL?
     var originalData: Data?
+    var lastPostedDate: Date?
 
     // Custom parseObjects
+    var user: User?
     var petName: String?
     var petBreed: String?
-    var petDesc: String?
+    //var petDesc: String?
     var petImageFile: ParseFile?
+    var userImageFile: ParseFile?
 }
