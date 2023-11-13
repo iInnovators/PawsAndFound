@@ -32,7 +32,7 @@ class ProfileViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.allowsSelection = false
-
+        profileName.text = User.current?.username
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -41,8 +41,10 @@ class ProfileViewController: UIViewController {
     }
     
     private func queryPosts(){
-        let query = Pet.query().include("petName").include("petImageFile").include("userImageFile")
-        
+        // only get pets for current user
+        let pointer = try! User.current?.toPointer()
+        let constraint: QueryConstraint = "user" == pointer
+        let query = Pet.query(constraint).include("petName").include("petImageFile").include("userImageFile").include("user")
         query.find{ [weak self] result in
             switch result {
             case .success(let pets):
@@ -148,11 +150,6 @@ class ProfileViewController: UIViewController {
         }else{
             print("Configuring for a different user")
         }
-    }
-    
-    func configure(with user: User){
-        print(user.username)
-        profileName.text = user.username
     }
     
 }

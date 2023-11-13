@@ -15,7 +15,8 @@ class PostViewController: UIViewController {
     @IBOutlet weak var shareButton: UIBarButtonItem!
     @IBOutlet weak var captionTextField: UITextField!
     @IBOutlet weak var previewImageView: UIImageView!
-
+    @IBOutlet weak var locationTextField: UITextField!
+    
     private var pickedImage: UIImage?
 
     override func viewDidLoad() {
@@ -122,6 +123,7 @@ class PostViewController: UIViewController {
         // Set properties
         post.imageFile = imageFile
         post.caption = captionTextField.text
+        post.locationInfo = locationTextField.text
 
         // Set the user as the current user
         post.user = User.current
@@ -225,7 +227,6 @@ extension PostViewController: PHPickerViewControllerDelegate {
         }
 
         print("📍 Image location coordinate: \(location.coordinate)")
-        
         
         
         // Make sure we have a non-nil item provider
