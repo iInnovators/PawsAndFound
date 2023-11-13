@@ -105,7 +105,7 @@ Paws and Found is an app for pets who are lost. Lost pet owners will be able to 
 
 ## Schema 
 
-[This section will be completed in Unit 9]
+[![Video](https://img.youtube.com/vi/plXLw9icgk/maxresdefault.jpg)](https://www.youtube.com/watch?v=-plXLw9icgk)
 
 ### Models
 
