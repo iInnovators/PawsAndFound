@@ -42,8 +42,6 @@ class FeedViewController: UIViewController {
         let query = Post.query()
             .include("user")
             .order([.descending("createdAt")])
-            .where("createdAt" >= yesterdayDate) // <- Only include results created yesterday onwards
-            .limit(10) // <- Limit max number of returned posts to 10
 
         // Find and return posts that meet query criteria (async)
         query.find { [weak self] result in
