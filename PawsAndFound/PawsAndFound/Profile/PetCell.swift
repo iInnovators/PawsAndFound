@@ -6,10 +6,13 @@
 //
 
 import UIKit
+import ParseSwift
+import Alamofire
 
 
 class PetCell: UITableViewCell {
 
+    var imageDataRequest: DataRequest?
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -31,6 +34,22 @@ class PetCell: UITableViewCell {
         petNameLabel.text = pet.petName
         petBreedLabel.text = pet.petBreed
         petDescriptionLabel.text = pet.petDesc
-        // TODO: add image
+
+        // Image
+        if let petImageView = pet.petImageFile,
+           let imageUrl = petImageView.url {
+            
+            // Use AlamofireImage helper to fetch remote image from URL
+            imageDataRequest = AF.request(imageUrl).responseImage { [weak self] response in
+                switch response.result {
+                case .success(let image):
+                    // Set image view image with fetched image
+                    self?.petImageView.image = image
+                case .failure(let error):
+                    print("❌ Error fetching image: \(error.localizedDescription)")
+                    break
+                }
+            }
+        }
     }
 }

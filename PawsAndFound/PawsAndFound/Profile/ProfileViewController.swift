@@ -6,8 +6,14 @@
 //
 
 import UIKit
+import ParseSwift
+import Alamofire
+import PhotosUI
 
 class ProfileViewController: UIViewController {
+    
+    var imageDataRequest: DataRequest?
+    private var pickedImage: UIImage?
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -35,7 +41,7 @@ class ProfileViewController: UIViewController {
     }
     
     private func queryPosts(){
-        let query = Pet.query().include("petName")
+        let query = Pet.query().include("petName").include("petImageFile").include("userImageFile")
         
         query.find{ [weak self] result in
             switch result {
@@ -47,8 +53,102 @@ class ProfileViewController: UIViewController {
         }
     }
     
+    
+    @IBAction func onPickedImageTapped(_ sender: Any) {
+        // Create a configuration object
+        var config = PHPickerConfiguration()
+
+        // Set the filter to only show images as options (i.e. no videos, etc.).
+        config.filter = .images
+
+        // Request the original file format. Fastest method as it avoids transcoding.
+        config.preferredAssetRepresentationMode = .current
+
+        // Only allow 1 image to be selected at a time.
+        config.selectionLimit = 1
+
+        // Instantiate a picker, passing in the configuration.
+        let picker = PHPickerViewController(configuration: config)
+
+        // Set the picker delegate so we can receive whatever image the user picks.
+        picker.delegate = self
+
+        // Present the picker
+        present(picker, animated: true)
+        //--------------------------------------
+        
+    }
+    
+    
+    @IBAction func onSaveTapped(_ sender: Any) {
+        // Unwrap optional pickedImage
+        guard let image = pickedImage,
+              // Create and compress image data (jpeg) from UIImage
+              let imageData = image.jpegData(compressionQuality: 0.1) else {
+            return
+        }
+
+        // Create a Parse File by providing a name and passing in the image data
+        let imageFile = ParseFile(name: "image.jpg", data: imageData)
+
+        // Create Post object
+        var pet = Pet()
+
+        // Set properties
+        pet.userImageFile = imageFile
+        // Set the user as the current user
+        pet.user = User.current
+        // Save object in background (async)
+        pet.save { [weak self] result in
+
+            // Switch to the main thread for any UI updates
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let pet):
+                    print("✅ image Saved! \(pet)")
+
+                    // Return to previous view controller
+                    self?.configure(with: pet)
+                    self?.navigationController?.popViewController(animated: true)
+
+                case .failure(let error):
+                    self?.showAlert(description: error.localizedDescription)
+                }
+            }
+        }
+    }
+    
     @IBOutlet weak var profileName: UILabel!
     @IBOutlet weak var profilePicture: UIImageView!
+    
+    func configure(with pet: Pet){
+       
+        if let currentUser = User.current, let petUser = pet.user, petUser == currentUser {
+            // Image
+            print("Configuring for current user")
+            if let profilePicture = pet.userImageFile,
+               let imageUrl = profilePicture.url {
+                
+                // Use AlamofireImage helper to fetch remote image from URL
+                print("Image URL: \(imageUrl)")
+                imageDataRequest = AF.request(imageUrl).responseImage { [weak self] response in
+                    switch response.result {
+                    case .success(let image):
+                        // Set image view image with fetched image
+                        self?.profilePicture.image = image
+                        print("Image set successfully")
+                    case .failure(let error):
+                        print("❌ Error fetching image: \(error.localizedDescription)")
+                        break
+                    }
+                }
+            }else{
+                print("Pet has no userImageFile")
+            }
+        }else{
+            print("Configuring for a different user")
+        }
+    }
     
     func configure(with user: User){
         print(user.username)
@@ -72,4 +172,41 @@ extension ProfileViewController: UITableViewDataSource {
     }
 }
 
+extension ProfileViewController: PHPickerViewControllerDelegate {
+    func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
+        picker.dismiss(animated: true)
+        
+        // Make sure we have a non-nil item provider
+        guard let provider = results.first?.itemProvider,
+              // Make sure the provider can load a UIImage
+              provider.canLoadObject(ofClass: UIImage.self) else { return }
+        
+        // Load a UIImage from the provider
+        provider.loadObject(ofClass: UIImage.self) { [weak self] object, error in
+            
+            // Make sure we can cast the returned object to a UIImage
+            guard let image = object as? UIImage else {
+                
+                // ❌ Unable to cast to UIImage
+                self?.showAlert()
+                return
+            }
+          
+
+                  // UI updates (like setting image on image view) should be done on main thread
+                  DispatchQueue.main.async {
+
+                     // Set image on preview image view
+                     self?.profilePicture.image = image
+
+                     // Set image to use when saving post
+                     self?.pickedImage = image
+                  }
+               }
+            
+        }
+        
+    }
+
 extension ProfileViewController: UITableViewDelegate { }
+
