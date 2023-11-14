@@ -26,6 +26,10 @@
 		5B7517B12AF0399E00F8C387 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7517B02AF0399E00F8C387 /* SceneDelegate.swift */; };
 		5B7517B82AF039A000F8C387 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B7517B72AF039A000F8C387 /* Assets.xcassets */; };
 		5B7517BB2AF039A000F8C387 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B7517B92AF039A000F8C387 /* LaunchScreen.storyboard */; };
+		5B7A9FEF2B030BF300A2F548 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7A9FEE2B030BF300A2F548 /* Comment.swift */; };
+		5B7A9FF42B030BFE00A2F548 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7A9FF12B030BFE00A2F548 /* CommentsViewController.swift */; };
+		5B7A9FF52B030BFE00A2F548 /* AddCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7A9FF22B030BFE00A2F548 /* AddCommentViewController.swift */; };
+		5B7A9FF62B030BFE00A2F548 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7A9FF32B030BFE00A2F548 /* CommentCell.swift */; };
 		5BC335B32B0067E100694E29 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC335B22B0067E100694E29 /* ProfileViewController.swift */; };
 		5BC335B62B0070F900694E29 /* AddPetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC335B52B0070F900694E29 /* AddPetViewController.swift */; };
 		5BC335B82B0075E700694E29 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC335B72B0075E700694E29 /* MapViewController.swift */; };
@@ -50,6 +54,10 @@
 		5B7517B72AF039A000F8C387 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B7517BA2AF039A000F8C387 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B7517BC2AF039A000F8C387 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B7A9FEE2B030BF300A2F548 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		5B7A9FF12B030BFE00A2F548 /* CommentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
+		5B7A9FF22B030BFE00A2F548 /* AddCommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCommentViewController.swift; sourceTree = "<group>"; };
+		5B7A9FF32B030BFE00A2F548 /* CommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		5BC335B22B0067E100694E29 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		5BC335B52B0070F900694E29 /* AddPetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPetViewController.swift; sourceTree = "<group>"; };
 		5BC335B72B0075E700694E29 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +82,7 @@
 			children = (
 				5B5A3DCA2AF7F45E00AC84D2 /* User.swift */,
 				5B5A3DCB2AF7F45E00AC84D2 /* Post.swift */,
+				5B7A9FEE2B030BF300A2F548 /* Comment.swift */,
 				0811F3662AF973C5005AD1C2 /* Pet.swift */,
 			);
 			path = Models;
@@ -136,10 +145,11 @@
 				5B7517AE2AF0399E00F8C387 /* AppDelegate.swift */,
 				5B7517B02AF0399E00F8C387 /* SceneDelegate.swift */,
 				5B5A3DCE2AF7F47700AC84D2 /* Extensions */,
-				5B5A3DD32AF7F48800AC84D2 /* Feed */,
 				5B5A3DC92AF7F45E00AC84D2 /* Models */,
 				5B5A3DD82AF7F49500AC84D2 /* Login */,
+				5B5A3DD32AF7F48800AC84D2 /* Feed */,
 				5B5A3DDD2AF7F49F00AC84D2 /* Post */,
+				5B7A9FF02B030BFE00A2F548 /* Comments */,
 				5BC335B42B0070D900694E29 /* Profile */,
 				5BC335B72B0075E700694E29 /* MapViewController.swift */,
 				5B7517B72AF039A000F8C387 /* Assets.xcassets */,
@@ -148,6 +158,16 @@
 				5B7517BC2AF039A000F8C387 /* Info.plist */,
 			);
 			path = PawsAndFound;
+			sourceTree = "<group>";
+		};
+		5B7A9FF02B030BFE00A2F548 /* Comments */ = {
+			isa = PBXGroup;
+			children = (
+				5B7A9FF12B030BFE00A2F548 /* CommentsViewController.swift */,
+				5B7A9FF22B030BFE00A2F548 /* AddCommentViewController.swift */,
+				5B7A9FF32B030BFE00A2F548 /* CommentCell.swift */,
+			);
+			path = Comments;
 			sourceTree = "<group>";
 		};
 		5BC335B42B0070D900694E29 /* Profile */ = {
@@ -246,13 +266,17 @@
 				5B5A3DCC2AF7F45E00AC84D2 /* User.swift in Sources */,
 				5B5A3DD12AF7F47700AC84D2 /* DateFormatter+Extensions.swift in Sources */,
 				5B7517AF2AF0399E00F8C387 /* AppDelegate.swift in Sources */,
+				5B7A9FEF2B030BF300A2F548 /* Comment.swift in Sources */,
 				5B5A3DDB2AF7F49500AC84D2 /* SignUpViewController.swift in Sources */,
 				5B7517B12AF0399E00F8C387 /* SceneDelegate.swift in Sources */,
+				5B7A9FF42B030BFE00A2F548 /* CommentsViewController.swift in Sources */,
 				5B5A3DD72AF7F48900AC84D2 /* PostCell.swift in Sources */,
 				5B5A3DCD2AF7F45E00AC84D2 /* Post.swift in Sources */,
 				5B5A3DD62AF7F48800AC84D2 /* FeedViewController.swift in Sources */,
 				0811F3672AF973C5005AD1C2 /* Pet.swift in Sources */,
+				5B7A9FF52B030BFE00A2F548 /* AddCommentViewController.swift in Sources */,
 				5BC335B62B0070F900694E29 /* AddPetViewController.swift in Sources */,
+				5B7A9FF62B030BFE00A2F548 /* CommentCell.swift in Sources */,
 				5BC335B32B0067E100694E29 /* ProfileViewController.swift in Sources */,
 				5B5A3DD22AF7F47700AC84D2 /* ViewController+Extensions.swift in Sources */,
 				5BC335B82B0075E700694E29 /* MapViewController.swift in Sources */,
