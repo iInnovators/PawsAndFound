@@ -35,17 +35,18 @@ Paws and Found is an app for pets who are lost. Lost pet owners will be able to 
 - [X] Users can create a new account
 - [X] Users can log-in to their account
 - [X] Users can post a photo to their feed with geolocation on
-- [ ] Users can update their post to "Pet found"
+- [X] Users will be able to comment on posts to show support
 - [X] Users can refresh their feed
-- [ ] Users will receive notifications
 
 **Optional Nice-to-have Stories**
 
 - [ ] Users can privately message other users
-- [ ] Users will be able to comment on posts to show support
+- [ ] Users can update their posts to "Pet found"
 - [ ] Users will be able to tap into categories (dog, bunny, cat, etc.)
 - [ ] Users will be able to see trending lost pets in their areas
-- [ ] Users will be able to reset password if forgot password
+- [ ] Users will be able to reset passwords if forgot their password
+- [ ] Users will receive notifications
+
 
 ### 2. Screen Archetypes
 
@@ -54,8 +55,8 @@ Paws and Found is an app for pets who are lost. Lost pet owners will be able to 
     - Users can log-in to their account
 
 - Stream
-    - Users can update their post to "Pet found"
     - Users can refresh their feed
+    - User can get comments
 
 - Creation
     - Users can post a photo to their feed with geolocation on
@@ -73,7 +74,7 @@ Paws and Found is an app for pets who are lost. Lost pet owners will be able to 
 
 * Home Screen
 * Post a photo
-* Notifications
+* Map
 * Profile
 
 **Flow Navigation** (Screen to Screen)
@@ -95,14 +96,6 @@ Paws and Found is an app for pets who are lost. Lost pet owners will be able to 
 ### [BONUS] Interactive Prototype
 
 ## Progress GIFs
-<div>
-    <a href="https://www.loom.com/share/219d6c794de4418dbd6c9dad0e3fb794">
-    </a>
-    <a href="https://www.loom.com/share/219d6c794de4418dbd6c9dad0e3fb794">
-      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/219d6c794de4418dbd6c9dad0e3fb794-with-play.gif">
-    </a>
-  </div>
-
   <div>
     <a>
     </a>
@@ -114,13 +107,3 @@ Paws and Found is an app for pets who are lost. Lost pet owners will be able to 
 ## Schema 
 
 [![Video](https://img.youtube.com/vi/RtpW2tD3M/maxresdefault.jpg)](https://www.youtube.com/watch?v=D_RtpW2tD3M)
-
-### Models
-
-[Add table of models]
-
-### Networking
-
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
