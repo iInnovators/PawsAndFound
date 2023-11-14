@@ -91,11 +91,12 @@ Paws and Found is an app for pets who are lost. Lost pet owners will be able to 
 <img src="https://hackmd.io/_uploads/SJFn3bhz6.jpg" width=600>
 
 ## Progress GIFs
-  <div>
-    <a>
+<div>
+    <a href="https://www.loom.com/share/33ae69e0a27648e988efcc4bb2b0fb6a">
+      <p>14 November, 2023 - Demo-PawsAndFound - Watch Video</p>
     </a>
-    <a>
-      <img style="max-width:300px;" src="https://im2.ezgif.com/tmp/ezgif-2-e0ff2dab15.gif">
+    <a href="https://www.loom.com/share/33ae69e0a27648e988efcc4bb2b0fb6a">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/33ae69e0a27648e988efcc4bb2b0fb6a-with-play.gif">
     </a>
   </div>
 
