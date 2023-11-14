@@ -9,14 +9,15 @@ import UIKit
 import ParseSwift
 
 class CommentsViewController: UIViewController {
-
+    
     @IBOutlet weak var commentTableView: UITableView!
     private let commentsRefreshControl = UIRefreshControl()
-    
     private var comments = [Comment]() {
         didSet {
-            // Reload table view data any time the posts variable gets updated.
-            commentTableView.reloadData()
+            DispatchQueue.main.async{
+                // Reload table view data any time the posts variable gets updated.
+                self.commentTableView.reloadData()
+            }
         }
     }
     
@@ -24,11 +25,11 @@ class CommentsViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        //commentTableView.delegate = self
-        //commentTableView.dataSource = self
-        //commentTableView.allowsSelection = false
+        commentTableView.delegate = self
+        commentTableView.dataSource = self
+        commentTableView.allowsSelection = false
 
-        //commentTableView.refreshControl = commentsRefreshControl
+        commentTableView.refreshControl = commentsRefreshControl
         //commentsRefreshControl.addTarget(self, action: #selector(onPullToRefresh), for: .valueChanged)
     }
     
@@ -38,13 +39,28 @@ class CommentsViewController: UIViewController {
         queryComments()
     }
     
+//    let query = Pet.query().include("petName").include("petImageFile").include("userImageFile")
+//    // Custom parseObjects
+//    var user: User?
+//    var petName: String?
+//    var petBreed: String?
+//    //var petDesc: String?
+//    var petImageFile: ParseFile?
+//    var userImageFile: ParseFile?
+    
+
     private func queryComments(completion: (() -> Void)? = nil) {
-        let yesterdayDate = Calendar.current.date(byAdding: .day, value: (-1), to: Date())!
-        let query = Comment.query()
-            .include("user")
-            .order([.descending("createdAt")])
-            .where("createdAt" >= yesterdayDate) // <- Only include results created yesterday onwards
-            .limit(10) // <- Limit max number of returned posts to 10
+//        let yesterdayDate = Calendar.current.date(byAdding: .day, value: (-1), to: Date())!
+        // only get pets for current user
+//        let pointer = try! User.current?.toPointer()
+//        let constraint: QueryConstraint = "user" == pointer
+        let query = Comment.query().include("comment").include("user") // "constraint"
+        
+        //let query = Comment.query()
+        //    .include("user")
+//            .order([.descending("createdAt")])
+//            .where("createdAt" >= yesterdayDate) // <- Only include results created yesterday onwards
+//            .limit(10) // <- Limit max number of returned posts to 10
 
         // Find and return posts that meet query criteria (async)
         query.find { [weak self] result in
@@ -75,18 +91,18 @@ class CommentsViewController: UIViewController {
 
 }
 
-//extension CommentsViewController: UITableViewDataSource {
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        comments.count
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CommentCell", for: indexPath) as? CommentCell else {
-//            return UITableViewCell()
-//        }
-//        cell.configure(with: comments[indexPath.row])
-//        return cell
-//    }
-//}
-//
-//extension FeedViewController: UITableViewDelegate { }
+extension CommentsViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        comments.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CommentCell", for: indexPath) as? CommentCell else {
+            return UITableViewCell()
+        }
+        cell.configure(with: comments[indexPath.row])
+        return cell
+    }
+}
+
+extension CommentsViewController: UITableViewDelegate { }

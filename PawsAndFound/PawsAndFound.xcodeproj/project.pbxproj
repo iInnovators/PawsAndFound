@@ -12,6 +12,7 @@
 		3DDF330C2B0288B7007AB462 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDF330B2B0288B7007AB462 /* Comment.swift */; };
 		3DDF33132B02A5F1007AB462 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDF33122B02A5F1007AB462 /* CommentsViewController.swift */; };
 		3DDF33152B02A644007AB462 /* AddCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDF33142B02A644007AB462 /* AddCommentViewController.swift */; };
+		3DDF33172B02D778007AB462 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDF33162B02D778007AB462 /* CommentCell.swift */; };
 		5B5A3DC22AF7F3DB00AC84D2 /* ParseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5B5A3DC12AF7F3DB00AC84D2 /* ParseSwift */; };
 		5B5A3DC52AF7F3EA00AC84D2 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 5B5A3DC42AF7F3EA00AC84D2 /* AlamofireImage */; };
 		5B5A3DC82AF7F41900AC84D2 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 5B5A3DC72AF7F41900AC84D2 /* Alamofire */; };
@@ -40,6 +41,7 @@
 		3DDF330B2B0288B7007AB462 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		3DDF33122B02A5F1007AB462 /* CommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
 		3DDF33142B02A644007AB462 /* AddCommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCommentViewController.swift; sourceTree = "<group>"; };
+		3DDF33162B02D778007AB462 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		5B5A3DCA2AF7F45E00AC84D2 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5B5A3DCB2AF7F45E00AC84D2 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		5B5A3DCF2AF7F47700AC84D2 /* DateFormatter+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extensions.swift"; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 			children = (
 				3DDF33122B02A5F1007AB462 /* CommentsViewController.swift */,
 				3DDF33142B02A644007AB462 /* AddCommentViewController.swift */,
+				3DDF33162B02D778007AB462 /* CommentCell.swift */,
 			);
 			path = Comments;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				0811F3672AF973C5005AD1C2 /* Pet.swift in Sources */,
 				3DDF33152B02A644007AB462 /* AddCommentViewController.swift in Sources */,
 				5BC335B62B0070F900694E29 /* AddPetViewController.swift in Sources */,
+				3DDF33172B02D778007AB462 /* CommentCell.swift in Sources */,
 				5BC335B32B0067E100694E29 /* ProfileViewController.swift in Sources */,
 				5B5A3DD22AF7F47700AC84D2 /* ViewController+Extensions.swift in Sources */,
 				5BC335B82B0075E700694E29 /* MapViewController.swift in Sources */,

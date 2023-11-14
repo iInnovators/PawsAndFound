@@ -381,7 +381,7 @@
                                 <rect key="frame" x="0.0" y="91" width="390" height="753"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="69" id="szZ-Jf-Blm">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommentCell" rowHeight="69" id="szZ-Jf-Blm" customClass="CommentCell" customModule="PawsAndFound" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="390" height="69"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="szZ-Jf-Blm" id="2qq-CR-R5S">
@@ -409,6 +409,10 @@
                                                 <constraint firstItem="StU-uW-E6j" firstAttribute="top" secondItem="2qq-CR-R5S" secondAttribute="top" constant="20" id="tUy-Ye-kDQ"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="userCommentLabel" destination="ONw-3g-3vA" id="20Z-nT-3mA"/>
+                                            <outlet property="usernameLabel" destination="StU-uW-E6j" id="cSY-Yj-bRG"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -460,6 +464,9 @@
                                         <color key="tintColor" systemColor="systemBlueColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Comment"/>
+                                        <connections>
+                                            <action selector="onCommentTapped:" destination="4Yd-vh-MPc" eventType="touchUpInside" id="i5P-L9-Wi1"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -474,6 +481,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add comment" id="FAZ-0o-aPj"/>
+                    <connections>
+                        <outlet property="commentTextField" destination="ekR-pL-uyT" id="KKx-Sa-aoM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nxi-FZ-u8v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

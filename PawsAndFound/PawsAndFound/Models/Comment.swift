@@ -19,5 +19,6 @@ struct Comment: ParseObject {
     // Your own custom properties.
     var comment: String?
     var user: User?
-    var profilePic: ParseFile?
+    var post: Post?
+    //var profilePic: ParseFile?
 }
