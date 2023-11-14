@@ -91,10 +91,6 @@ Paws and Found is an app for pets who are lost. Lost pet owners will be able to 
 
 <img src="https://hackmd.io/_uploads/SJFn3bhz6.jpg" width=600>
 
-### [BONUS] Digital Wireframes & Mockups
-
-### [BONUS] Interactive Prototype
-
 ## Progress GIFs
   <div>
     <a>
